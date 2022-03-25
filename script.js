@@ -48,7 +48,7 @@ function tweetQuote(e) {
   const text = `${quote}  ${author}  ${url}`
   const tweetableQuote = `https://twitter.com/intent/tweet?text=${text}`
 
-  window.location.href = tweetableQuote
+  window.open(tweetableQuote, 'target="_blank"')
 }
 
 const tweetBtn = document.querySelector('#twitter')
