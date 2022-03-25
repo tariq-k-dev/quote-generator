@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Quote Generator</title>
+		<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+			integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+			crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+
+	<body>
+		<div class="container">
+			<h1>Get A Quote</h1>
+			<div class="quote-container" id="quote-container">
+				<div class="quote-section">
+					<!-- Quote -->
+					<div class="quote-text">
+						<i class="fa fa-quote-left" aria-hidden="true"></i>
+						<span id="quote"></span>
+					</div>
+					<!-- Author -->
+					<div class="quote-author">
+						<span id="author"></span>
+					</div>
+				</div>
+				<!-- Buttons -->
+				<div class="button-container">
+					<button class="twitter-button twitter-share-button" id="twitter" title="Tweet this!">
+						<i class="fab fa-twitter"></i> Tweet
+					</button>
+					<button class="button" id="new-quote" onclick="getQuote()">
+						New Quote
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Script -->
+		<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		<script src="./script.js"></script>
+	</body>
+
+</html>
