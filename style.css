@@ -178,6 +178,7 @@ body {
 
 .container .button-container .twitter-button {
   font-size: 1.1rem;
+  font-weight: 500;
   padding: 0.4rem 0.5rem;
   text-transform: none;
 }
@@ -185,6 +186,23 @@ body {
 .container .button-container .twitter-button:hover:before {
   background-color: #38a1f3;
   width: 100%;
+}
+
+.container .repo {
+  border-bottom: 0.13rem solid #227093;
+  color: #227093;
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  padding-bottom: 0.1rem;
+  text-decoration: none;
+  -webkit-transition: border-bottom 0.3s ease-out;
+  transition: border-bottom 0.3s ease-out;
+}
+
+.container .repo:hover {
+  border-bottom: 0.13rem solid #fff;
 }
 
 @media only screen and (max-width: 540px) {
