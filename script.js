@@ -31,10 +31,8 @@ async function storeQuotes() {
   const localQuotes = localStorage.getItem('quotes');
 
   if (localQuotes !== null) {
-    console.log('using localStorage');
     getQuote();
   } else {
-    console.log('using fetch api');
     const quotes = await getQuotes();
     localStorage.setItem('quotes', JSON.stringify(quotes));
     getQuote();
