@@ -15,27 +15,30 @@ function complete() {
 }
 
 async function getQuotes() {
-  const localQuotes = localStorage.getItem('quotes');
+  try {
+    const response = await fetch('https://type.fit/api/quotes');
+    quotes = await response.json();
 
-  if (localQuotes !== null) {
-    return JSON.parse(localQuotes);
-  } else {
-    try {
-      const response = await fetch('https://type.fit/api/quotes');
-      quotes = await response.json();
-
-      return quotes;
-    } catch (err) {
-      console.error(err);
-    }
+    return quotes;
+  } catch (err) {
+    console.error(err);
   }
 }
 
 async function storeQuotes() {
   loading();
-  const quotes = await getQuotes();
-  localStorage.setItem('quotes', JSON.stringify(quotes));
-  getQuote();
+
+  const localQuotes = localStorage.getItem('quotes');
+
+  if (localQuotes !== null) {
+    console.log('using localStorage');
+    getQuote();
+  } else {
+    console.log('using fetch api');
+    const quotes = await getQuotes();
+    localStorage.setItem('quotes', JSON.stringify(quotes));
+    getQuote();
+  }
 }
 
 function getQuote() {
@@ -61,6 +64,8 @@ function getQuote() {
     authorElem.innerText = `-${authorFixed}`;
 
     complete();
+  } else {
+    storeQuotes();
   }
 }
 
