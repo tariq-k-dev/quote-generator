@@ -17,7 +17,9 @@ function complete() {
 async function getQuotes() {
   console.log("inside getQuotes");
   try {
-    const response = await fetch("/js/quotes.json");
+    const response = await fetch(
+      "https://raw.githubusercontent.com/tariq-k-dev/quote-generator/main/js/quotes.json"
+    );
     const quotes = await response.json();
 
     return quotes;
