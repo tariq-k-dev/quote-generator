@@ -1,7 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Raleway:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap");
+@import url("./fonts.css");
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -19,161 +18,105 @@ body {
 }
 
 .loader-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   /* Safari */
 }
-
 .loader-container .loader {
-  border: 16px solid #c8d6e5;
+  border: 16px solid rgb(200, 214, 229);
   border-radius: 50%;
-  border-top: 16px solid #227093;
+  border-top: 16px solid rgb(34, 112, 147);
   width: 120px;
-  height: 120px;
-  -webkit-animation: spin 2s linear infinite;
-  /* Safari */
+  height: 120px; /* Safari */
   animation: spin 2s linear infinite;
 }
-
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
-
 @keyframes spin {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
 .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
 }
-
 .container h1 {
-  color: #227093;
+  color: rgb(34, 112, 147);
   font-family: "Patrick Hand", cursive;
   font-size: 3.5rem;
   letter-spacing: 0.15rem;
-  margin-top: -3.5rem;
   margin-bottom: 0.5rem;
 }
-
 .container .quote-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: rgba(60, 99, 130, 0.05);
   border-radius: 1rem;
-  -webkit-box-shadow: #3c6382 0px 5px 15px;
-          box-shadow: #3c6382 0px 5px 15px;
-  color: #227093;
+  box-shadow: rgb(60, 99, 130) 0px 5px 15px;
+  color: rgb(34, 112, 147);
   width: 50vw;
   min-height: 50vh;
   letter-spacing: 0.025rem;
   padding: 2rem;
 }
-
+@media only screen and (max-width: 768px) {
+  .container .quote-container {
+    width: 94%;
+  }
+}
 .container .quote-container .quote-section {
   min-height: 18rem;
   font-weight: 600;
 }
-
 .container .quote-container .quote-section .quote-text {
   line-height: 2.2rem;
   width: 100%;
 }
-
 .container .quote-container .quote-section .quote-text .fa,
 .container .quote-container .quote-section .quote-text .fa-quote-left {
-  color: #227093;
+  color: rgb(34, 112, 147);
   font-size: 2.8rem;
   margin-right: 0.1rem;
 }
-
 .container .quote-container .quote-section .quote-text #quote {
   font-size: 2rem;
 }
-
 .container .quote-container .quote-section .quote-author {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
   margin: 0.5rem auto 1rem;
   width: 100%;
 }
-
 .container .quote-container .quote-section .quote-author #author {
   font-size: 1.6rem;
   font-style: italic;
 }
-
 .container .button-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
 }
-
 .container .button-container .button,
 .container .button-container .twitter-button {
   border: none;
   border-radius: 0.625rem;
-  background-color: #227093;
+  background-color: rgb(34, 112, 147);
   background-color: #2c90bc;
-  -webkit-box-shadow: 0 0.25rem rgba(34, 112, 147, 0.55);
-          box-shadow: 0 0.25rem rgba(34, 112, 147, 0.55);
+  box-shadow: 0 0.25rem rgba(34, 112, 147, 0.55);
   display: inline-block;
   color: #fff;
   cursor: pointer;
@@ -187,7 +130,6 @@ body {
   text-transform: uppercase;
   z-index: 1;
 }
-
 .container .button-container .button:after,
 .container .button-container .twitter-button:after {
   content: "";
@@ -198,7 +140,6 @@ body {
   height: 100%;
   z-index: -2;
 }
-
 .container .button-container .button:before,
 .container .button-container .twitter-button:before {
   content: "";
@@ -207,51 +148,48 @@ body {
   left: 0;
   width: 0%;
   height: 100%;
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   z-index: -1;
 }
-
 .container .button-container .button:hover:before,
 .container .button-container .twitter-button:hover:before {
   background-color: #1d607e;
   width: 100%;
 }
-
 .container .button-container .button:active,
 .container .button-container .twitter-button:active {
-  -webkit-transform: translate(0, 0.3rem);
-          transform: translate(0, 0.3rem);
-  -webkit-box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
-          box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
+  transform: translate(0, 0.3rem);
+  box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
 }
-
 .container .button-container .twitter-button {
   font-size: 1.1rem;
   font-weight: 500;
   padding: 0.4rem 0.5rem;
   text-transform: none;
 }
-
 .container .button-container .twitter-button:hover:before {
   background-color: #38a1f3;
   width: 100%;
 }
 
-.container .repo {
-  border-bottom: 0.13rem solid #227093;
-  color: #227093;
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6rem;
+}
+footer .repo {
+  border-bottom: 0.13rem solid rgb(34, 112, 147);
+  color: rgb(34, 112, 147);
   display: block;
   font-size: 1.2rem;
   font-weight: 600;
   margin-top: 2rem;
   padding-bottom: 0.1rem;
   text-decoration: none;
-  -webkit-transition: border-bottom 0.3s ease-out;
   transition: border-bottom 0.3s ease-out;
 }
-
-.container .repo:hover {
+footer .repo:hover {
   border-bottom: 0.13rem solid #fff;
 }
 
@@ -259,4 +197,4 @@ body {
   .container .quote-container {
     width: 94%;
   }
-}
+}/*# sourceMappingURL=style.css.map */
